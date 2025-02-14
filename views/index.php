@@ -2,7 +2,7 @@
 
 use App\Models\Beer;
 
-$biers = Beer::query()->get();
+$beers = Beer::query()->get();
 
 ?>
 <table>
@@ -10,17 +10,17 @@ $biers = Beer::query()->get();
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Age</th>
+            <th>Brewer</th>
             <th>Likes</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($biers as $bier) : ?>
+        <?php foreach ($beers as $beer) : ?>
             <tr>
-                <td><?= $bier->id ?></td>
-                <td><?= $bier->name ?></td>
-                <td><?= $bier->brewer ?></td>
+                <td><?= $beer->id ?></td>
+                <td><?= $beer->name ?></td>
+                <td><?= $beer->brewer ?></td>
                 <td>0</td>
                 <td>
                     <button>Like</button>
